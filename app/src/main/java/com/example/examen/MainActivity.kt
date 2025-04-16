@@ -12,21 +12,20 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.examen.ui.theme.ExamenTheme
+import dagger.hilt.android.AndroidEntryPoint
+import com.example.examen.libro.LibroUI
+
+@AndroidEntryPoint
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Theme_Ucbtest)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            ExamenTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+            LibroUI()
         }
+
     }
 }
 
