@@ -13,13 +13,9 @@ import kotlinx.coroutines.launch
 
 @HiltViewModel
 class LibroViewModel @Inject constructor(
-    val findGitAlias : FindLibro
+    val findLibro : FindLibro
 ) : ViewModel() {
-    val findLibro = FindLibro()
-
-
-
-    sealed class LibroState {
+        sealed class LibroState {
         object Init: LibroState()
         class Successful(val model: Libro): LibroState()
     }
@@ -30,7 +26,8 @@ class LibroViewModel @Inject constructor(
 
     fun fetchLibro(title: String) {
         viewModelScope.launch {
-            findLibro.invoke(title) // esta llamada retorna un Objeto del modulo domain
+            val result=findLibro.invoke(title)
+            _flow.value=LibroState.Successful(result)
         }
     }
 }
