@@ -12,11 +12,3 @@ plugins {
     alias(libs.plugins.kotlinSerialization) apply false
     alias(libs.plugins.google.gms.google.services) apply false
 }
-
-subprojects {
-    apply(plugin = "io.gitlab.arturbosch.detekt")
-    detekt {
-        parallel = true
-        config.setFrom(files("${project.rootDir}/detekt.yml"))
-    }
-}

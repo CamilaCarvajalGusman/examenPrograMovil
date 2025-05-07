@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "307551979250",
+    "firebase_url": "https://mobileapp-eee06-default-rtdb.firebaseio.com",
+    "project_id": "mobileapp-eee06",
+    "storage_bucket": "mobileapp-eee06.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307551979250:android:c4b21e8fe54033971a326b",
+        "android_client_info": {
+          "package_name": "com.example.examen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0PlWAPUlBGzmK120k_cjGt-d7T2grifM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

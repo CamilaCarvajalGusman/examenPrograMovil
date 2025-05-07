@@ -11,19 +11,20 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.examen.book.BookUI
 import com.example.examen.ui.theme.ExamenTheme
 import dagger.hilt.android.AndroidEntryPoint
-import com.example.examen.libro.LibroUI
+
 
 @AndroidEntryPoint
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(R.style.Theme_Ucbtest)
+        setTheme(R.style.Theme_Examen)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            LibroUI()
+            BookUI()
         }
 
     }

@@ -1,13 +1,12 @@
 package com.example.framework.mappers
 
-import com.example.domain.Libro
-import com.example.framework.dto.LibroResponseDto
+import com.example.domain.Book
+import com.example.framework.dto.BookResponseDto
 
-
-fun LibroResponseDto.toModel(): Libro {
-    return return Libro(
-        title = title,
-        author_name = author_name,
-        first_publish_year=first_publish_year
+fun BookResponseDto.toModel(): Book {
+    return Book(
+        title =  title,
+        authors = authors,
+        publishYear=publish_year
     )
 }
